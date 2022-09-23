@@ -2,13 +2,12 @@ import { EnergyType } from '../Energy';
 import Archetype from './Archetype';
 
 export default class Necromancer extends Archetype {
+  private _energyType: EnergyType;
   static countInstances = 0;
 
-  constructor(
-    name: string,
-    private _energyType: EnergyType = 'mana',
-  ) {
+  constructor(name: string) {
     super(name);
+    this._energyType = 'mana';
     Necromancer.countInstances += 1;
   }
 
